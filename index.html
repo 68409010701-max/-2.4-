@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>หน้าแรก</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="window" id="box">
+        <h1>หน้าแรก</h1>
+        <p>กดปุ่มแล้วหน้าจะเด้งก่อนเปลี่ยน</p>
+        <button onclick="goNext()">ไปหน้าถัดไป</button>
+    </div>
+
+    <script>
+        function goNext() {
+            const box = document.getElementById("box");
+            box.classList.add("bounce-out");
+
+            setTimeout(() => {
+                window.location.href = "page2.html";
+            }, 600); // รอให้ animation เล่นจบ
+        }
+    </script>
+
+</body>
+</html>
